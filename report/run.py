@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run the experiments behind Figures 1-16 of admission_parameter_rationale.md.
 
-Each figure is run with the go model (topdisc 703d5a2, defaults C = 5000) and
+Each figure is run with the go model (topdisc 703d5a2, C = 1000, the default) and
 with onur-paper (Onur's unmodified registrar, C = 1000) to check that the
 original figure is reproduced. Seeds 1-3. Run with python3 -I -B run.py.
 """
@@ -23,7 +23,7 @@ spec.loader.exec_module(compare)
 onur = compare.onur
 
 SEEDS = (1, 2, 3)
-MODEL_C = {'go': 5000, 'onur-paper': 1000}
+MODEL_C = {'go': 1000, 'onur-paper': 1000}
 POCC = (1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32)
 CAPACITY = (100, 250, 500, 1000, 2000, 5000)
 PREFIX = ('/24', '/16', '/8', 'diverse')

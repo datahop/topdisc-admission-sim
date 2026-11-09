@@ -3,7 +3,7 @@
 Rewrites devp2p `discv5/admission_parameter_rationale.md` (devp2p#20) against the registrar at datahop/go-ethereum topdisc 703d5a2b9. Plan: ../REPORT-PLAN.md.
 
 Files:
-- `run.py`: runs every figure's grid with `go` (C = 5000) and `onur-paper` (C = 1000), seeds 1-3, 12 workers; writes `data/<family>.csv`. Log: `run.log` (606 runs, about 15 min).
+- `run.py`: runs every figure's grid with `go` (C = 1000) and `onur-paper` (C = 1000), seeds 1-3, 12 workers; writes `data/<family>.csv`. Log: `run.log` (606 runs, about 15 min).
 - `figures.py`: `--model go` writes `fig*.png` here (the copies in the devp2p report); `--model onur-paper` writes `repro/fig*.png`. Needs matplotlib (`pip install -r requirements.txt`).
 - `summary.py`: mean (min-max) tables per figure for both models; output in `summary.md`.
 - `rerun_compare_go.py`: reruns the go rows of the compare grid (logs `compare-rerun.log` after #177, `compare-rerun-r1.log` after review round 1); results in ../compare/RESULTS.md.
@@ -49,7 +49,7 @@ Yes, every figure, within seed noise or close to it (mean of seeds 1-3 against t
 
 Probe: synthetic honest IPs give 33.8% attacker share at the default point, so the all.json input matters; the original figures match all.json.
 
-## Key numbers, go at C = 5000 (original report in brackets, C = 1000)
+## Key numbers, go at C = 5000, kept from the earlier run in `data-c5000/` (original report in brackets, C = 1000)
 
 After review round 1 (summary.md has the full tables).
 

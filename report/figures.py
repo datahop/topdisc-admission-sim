@@ -109,7 +109,7 @@ def main():
     m = args.model
     OUT = HERE if m == 'go' else HERE / 'repro'
     OUT.mkdir(exist_ok=True)
-    C = 5000 if m == 'go' else 1000
+    C = 1000
     hours = 1 / 3600
     pocc, cap, pre = load('pocc'), load('capacity'), load('prefix')
     pop, rate = load('popularity'), load('rate')
